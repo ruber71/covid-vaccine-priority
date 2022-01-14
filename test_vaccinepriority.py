@@ -1,7 +1,3 @@
-   
-#    test_headers = ['Age', 'Underlying Diseease', 'Serious Illnes', 'Nursing Home','Priority'] # Informational
-
-
 import pytest
 import vaccinepriority
 
@@ -74,22 +70,3 @@ import vaccinepriority
 def test_find_priority(age, underlying_diseases, serious_illnes, nursing_home, text, priority):
     assert vaccinepriority.find_priority(age, underlying_diseases, serious_illnes, nursing_home) == priority #, text
     
-"""
-COVID-19 vaccination priorities in Norway
-These priorities has been changed since the program was written
-1. Residents in nursing homes
-2. Age 85 years and older
-3. Age 75-84 years old  
-4. Age 65-74 years old
-4. Age 18-64 år with serious illnesses
-5. Age 55-64 years old with underlying diseases
-6. Age 45-54 years old with underlying diseases
-7. Age 18-44 years old with underlying diseases
-8. Age 55-64 years old  
-9. Age 45-54 years old
-10. Age 18-24 years old
-10. Age 40-44 years old
-12. Age 25-39 years old
-13. Age 16-17 years old
-14. Age 12-15 years old 
-"""
